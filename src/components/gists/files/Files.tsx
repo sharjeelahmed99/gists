@@ -2,9 +2,11 @@ import * as React from "react";
 import { File } from "@/types";
 import FilesBadge from "../badge/FilesBadge";
 import { humanReadableSize } from "@/utils";
+type FilesProps = {
+  files: any;
+};
 
-const Files: React.FC<any> = (props): JSX.Element => {
-  const { files } = props;
+const Files: React.FC<FilesProps> = ({ files }): JSX.Element => {
   return (
     <>
       <h3>Files</h3>

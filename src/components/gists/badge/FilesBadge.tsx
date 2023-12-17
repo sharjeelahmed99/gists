@@ -1,10 +1,13 @@
+import { Files } from "@/types";
 import { getLanguages } from "@/utils";
 import { Badge } from "antd";
 import { useMemo } from "react";
 import * as React from "react";
+type FilesBadgeProps = {
+  files: Files;
+};
 
-const FilesBadge: React.FC<any> = (props): JSX.Element => {
-  const { files } = props;
+const FilesBadge: React.FC<FilesBadgeProps> = ({ files }): JSX.Element => {
   const languages = useMemo(() => getLanguages(files), [files]);
   return (
     <>

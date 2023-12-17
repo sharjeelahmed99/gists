@@ -1,9 +1,13 @@
 import * as React from "react";
 import { getGistForkUrl } from "@/utils";
 import { Avatar, Divider } from "antd";
+import { Fork } from "@/types";
 
-const Forks: React.FC<any> = (props): JSX.Element => {
-  const { forks } = props;
+type ForksProps = {
+  forks: Fork[];
+};
+
+const Forks: React.FC<ForksProps> = ({ forks }): JSX.Element => {
   return (
     <>
       <h3>Oldest Forks</h3>

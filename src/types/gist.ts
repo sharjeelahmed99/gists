@@ -4,10 +4,12 @@ export interface File {
   language: string;
   size: number;
 }
-
+export interface Files {
+  [key: string]: File;
+}
 export interface Gist {
   id: string;
-  files: any;
+  files: Files;
   created_at: Date;
   updated_at: Date;
   description: string;

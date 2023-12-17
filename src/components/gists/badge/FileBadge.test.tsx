@@ -8,10 +8,10 @@ jest.mock("@/utils", () => ({
 
 describe("FilesBadge component", () => {
   test("renders the component with badges", () => {
-    const files = [
-      { name: "file1", language: "JavaScript" },
-      { name: "file2", language: "HTML" },
-    ];
+    const files = {
+      file1: { filename: "file1", type: "", size: 0, language: "JavaScript" },
+      file2: { filename: "file2", type: "", size: 0, language: "HTML" },
+    };
 
     render(<FilesBadge files={files} />);
 

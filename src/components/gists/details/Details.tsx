@@ -3,17 +3,19 @@ import * as React from "react";
 import { Descriptions, Divider } from "antd";
 import { getGistById } from "@/api";
 import FilesBadge from "../badge/FilesBadge";
-import { Fork } from "@/types";
+import { Files, Fork } from "@/types";
 import Forks from "../forks/Forks";
-import Files from "../files/Files";
+import ListFiles from "../files/Files";
 
 type Gist = {
   forks: Fork[];
-  files: any;
+  files: Files;
+};
+type DetailsProps = {
+  gistId: string;
 };
 
-const Details: React.FC<any> = (props): JSX.Element => {
-  const { gistId } = props;
+const Details: React.FC<DetailsProps> = ({ gistId }): JSX.Element => {
   const [gistDetails, setGistDetails] = useState<Gist>();
 
   const fetch = async () => {
@@ -51,7 +53,7 @@ const Details: React.FC<any> = (props): JSX.Element => {
       </Descriptions>
       <Divider />
 
-      {files && <Files files={files} />}
+      {files && <ListFiles files={files} />}
       <Divider />
 
       {oldestForks?.length > 0 && <Forks forks={oldestForks} />}

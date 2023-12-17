@@ -1,6 +1,6 @@
-import { File } from "@/types";
+import { File, Files } from "@/types";
 
-export const getLanguages = (files) => {
+export const getLanguages = (files?: Files) => {
   const languages = files
     ? Object.values(files).map(
         (file: File) =>
