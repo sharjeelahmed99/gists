@@ -123,6 +123,7 @@ export const Listing: React.FC = (): JSX.Element => {
       <Table
         dataSource={gistSource}
         columns={columns}
+        rowKey={"id"}
         pagination={{ pageSize: perPage, total: totalGists }}
         onChange={handlePagination}
         onRow={handleRowClick}
