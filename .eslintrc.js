@@ -7,7 +7,14 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   rules: {
-    "@typescript-eslint/no-unused-vars": 0, // handle in typescript
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
   },
   env: {
     browser: true,

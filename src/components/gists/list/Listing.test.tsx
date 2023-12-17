@@ -68,7 +68,7 @@ describe("Listing component", () => {
 
   test("verify  gist API error", async () => {
     (getGistsByUsername as jest.Mock).mockRejectedValueOnce(
-      new Error("API Error")
+      new Error("API Error"),
     );
     render(<Listing />);
   });

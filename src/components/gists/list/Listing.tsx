@@ -30,7 +30,7 @@ export const Listing: React.FC = (): JSX.Element => {
           headers["link"] &&
           headers["link"].match(/page=(\d+)&per_page=\d+>; rel="last"/);
         setTotalGists(
-          totalCount ? parseInt(totalCount[1], 10) * perPage : data.length
+          totalCount ? parseInt(totalCount[1], 10) * perPage : data.length,
         );
       }
 
@@ -77,7 +77,7 @@ export const Listing: React.FC = (): JSX.Element => {
           files: gist.files,
         };
       }),
-    [gists]
+    [gists],
   );
 
   const columns = [

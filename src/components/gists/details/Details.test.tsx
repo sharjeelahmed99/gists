@@ -62,7 +62,7 @@ describe("Details component", () => {
     });
     expect(screen.getByRole("link")).toHaveAttribute(
       "href",
-      `https://gist.github.com/${mockGistDetails.forks[0].user.login}/${mockGistDetails.forks[0].id}`
+      `https://gist.github.com/${mockGistDetails.forks[0].user.login}/${mockGistDetails.forks[0].id}`,
     );
   });
 

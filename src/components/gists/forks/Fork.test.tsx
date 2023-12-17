@@ -40,7 +40,7 @@ describe("Forks component", () => {
       expect(screen.getByText(fork.user.login)).toBeInTheDocument();
       expect(screen.getByText("View Fork")).toHaveAttribute(
         "href",
-        `https://gist.github.com/${fork.user.login}/${fork.id}`
+        `https://gist.github.com/${fork.user.login}/${fork.id}`,
       );
     });
   });

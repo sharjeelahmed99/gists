@@ -4,7 +4,7 @@ export const getLanguages = (files) => {
   const languages = files
     ? Object.values(files).map(
         (file: File) =>
-          file.language || file.type || file.filename.split(".")[0]
+          file.language || file.type || file.filename.split(".")[0],
       )
     : [];
   return [...new Set(languages)];

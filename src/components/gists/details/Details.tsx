@@ -33,10 +33,10 @@ const Details = ({ gistId }) => {
       [...(forks || [])]
         .sort(
           (a, b) =>
-            new Date(a.created_at).valueOf() - new Date(b.created_at).valueOf()
+            new Date(a.created_at).valueOf() - new Date(b.created_at).valueOf(),
         )
         .slice(0, 3),
-    [forks]
+    [forks],
   );
 
   return (
