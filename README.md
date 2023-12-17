@@ -13,8 +13,8 @@ https://yarnpkg.com/lang/en/docs/install/
 Clone and install Yarn dependencies:
 
 ```bash
-$ git clone
-$ cd gists-finder
+$ git clone git@github.com:sharjeelahmed99/gists.git
+$ cd gists
 $ yarn
 ```
 
