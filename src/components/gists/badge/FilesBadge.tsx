@@ -3,7 +3,7 @@ import { Badge } from "antd";
 import { useMemo } from "react";
 import * as React from "react";
 
-const FilesBadge = (props: { files: any }) => {
+const FilesBadge: React.FC<any> = (props): JSX.Element => {
   const { files } = props;
   const languages = useMemo(() => getLanguages(files), [files]);
   return (

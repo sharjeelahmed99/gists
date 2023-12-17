@@ -7,7 +7,6 @@ export interface File {
 
 export interface Gist {
   id: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   files: any;
   created_at: Date;
   updated_at: Date;

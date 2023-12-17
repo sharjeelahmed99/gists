@@ -1,9 +1,8 @@
 import * as React from "react";
-import { Fork } from "@/types";
 import { getGistForkUrl } from "@/utils";
 import { Avatar, Divider } from "antd";
 
-const Forks = (props: { forks: Fork[] }) => {
+const Forks: React.FC<any> = (props): JSX.Element => {
   const { forks } = props;
   return (
     <>

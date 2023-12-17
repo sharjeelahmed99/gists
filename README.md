@@ -47,3 +47,13 @@ $ yarn test
 ```bash
 $ yarn lint
 ```
+
+## Improvements
+
+- Create own wrapper components for AntD components
+- Helper module for jest unit tests
+- Create component props types
+- Remove vulnerabilities in npm packages
+- Implement husky for precommit hooks ( prettire and eslint)
+- Read gist base url from env file
+- Add IDE formatter settings

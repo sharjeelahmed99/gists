@@ -3,7 +3,7 @@ import { File } from "@/types";
 import FilesBadge from "../badge/FilesBadge";
 import { humanReadableSize } from "@/utils";
 
-const Files = (props: { files: File[] }) => {
+const Files: React.FC<any> = (props): JSX.Element => {
   const { files } = props;
   return (
     <>

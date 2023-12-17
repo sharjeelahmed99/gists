@@ -12,7 +12,8 @@ type Gist = {
   files: any;
 };
 
-const Details = ({ gistId }) => {
+const Details: React.FC<any> = (props): JSX.Element => {
+  const { gistId } = props;
   const [gistDetails, setGistDetails] = useState<Gist>();
 
   const fetch = async () => {
